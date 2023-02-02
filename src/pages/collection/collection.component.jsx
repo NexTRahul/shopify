@@ -7,7 +7,9 @@ import "./collection.styles.scss";
 const CollectionPage = ({ match }) => {
   const collections = useContext(CollectionsContext);
   const { collectionId } = useParams();
-  const collection = collections.find((collection) => collection.routeName === collectionId);
+  const collection = collections.find(
+    (collection) => collection.routeName === collectionId
+  );
   const { title, items } = collection;
   return (
     <div className="collection-page">
